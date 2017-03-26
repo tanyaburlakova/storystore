@@ -1,0 +1,29 @@
+{
+	"name": "storystore",
+	"version": "1",
+	"homepage": "https://github.com/tanyaburlakova/storystore",
+	"authors": [
+		"fatuk <ta.burlakova@gmail.com>"
+	],
+	"moduleType": [
+		"amd"
+	],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"overrides": {
+		"normalize.less": {
+			"ignore": "normalize.less"
+		}
+	},
+	"dependencies": {
+		"jquery": "~2.1.1",
+		"normalize.less": "^1.0.0"
+	}
+}
