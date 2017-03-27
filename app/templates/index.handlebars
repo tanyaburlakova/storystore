@@ -15,11 +15,46 @@
 	<![endif]-->
 </head>
 <body>
+	{{>header}}
+
 	<div class="container">
-		{{>button}}
-		{{>inputs}}
-		{{>form}}
+		<div class="grid">
+			<div class="grid__row">
+				<div class="grid__col _33">
+					<div class="grid__snippet"></div>
+				</div>
+
+				<div class="grid__col _33">
+					<div class="grid__snippet"></div>
+				</div>
+
+				<div class="grid__col _33">
+					<div class="grid__snippet"></div>
+				</div>
+			</div>
+
+			<div class="grid__row">
+				<div class="grid__col _66">
+					<div class="grid__snippet"></div>
+				</div>
+
+				<div class="grid__col _33">
+					<div class="grid__snippet"></div>
+				</div>
+			</div>
+
+			<div class="grid__row">
+				<div class="grid__col _33">
+					<div class="grid__snippet"></div>
+				</div>
+
+				<div class="grid__col _66">
+					<div class="grid__snippet"></div>
+				</div>
+			</div>
+		</div>
 	</div>
+	{{>footer}}
 	<script src="js/plugins.min.js"></script>
 	<script src="js/app.js?v={{timestamp}}"></script>
 </body>

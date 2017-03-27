@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1180px" height="6px" viewBox="0 0 1180 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1180" height="6"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-130.000000, -346.000000)">
+            <g id="Group-11" transform="translate(130.000000, 346.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(0.000000, -25.500000)">
+                        <polygon id="Rectangle-2-Copy" fill="#F36F2D" points="147.374681 0 295.529123 0 255.427169 60 107.272727 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-8" fill="#EFC519" points="5.78265723e-15 0 148.154442 0 108.052487 60 0 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-2" fill="#E7234F" points="294.749363 0 442.903804 0 402.80185 60 254.647409 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-7" fill="#A71E5D" points="442.124044 0 590.278486 0 550.176532 60 402.02209 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-3" fill="#652367" points="589.101954 0 737.256396 0 697.154442 60 549 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-4" fill="#2AA2DC" points="737.101954 0 885.256396 0 845.154442 60 697 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-5" fill="#82C341" points="884.248088 0 1032.40253 0 992.300576 60 844.146134 60"></polygon>
+                        <polygon id="Rectangle-2-Copy-6" fill="#5E5E5E" points="1031.62277 0 1180.77721 0 1179.77466 60 991.520816 60"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

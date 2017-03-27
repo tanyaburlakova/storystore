@@ -1,0 +1,36 @@
+.footer {
+  background: #141414;
+  color: rgba(255, 255, 255, 0.5);
+  .calc-rem(12);
+
+  &__top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 0;
+  }
+
+  &__bottom {
+    padding: 24px 0;
+    background: url("../img/footer-bg.svg") no-repeat 50% 100%;
+  }
+}
+
+.footer-nav {
+  flex-grow: 1;
+
+  &:last-child {
+    flex-grow: 2;
+  }
+
+  &__link {
+    letter-spacing: .5px;
+    line-height: 2;
+  }
+}
+
+.footer-contacts {
+  flex-grow: 1;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+}

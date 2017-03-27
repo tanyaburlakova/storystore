@@ -113,3 +113,8 @@
 	@c2: @color;
 	@{attr}: rgb((1 - @opacity) * red(@c1) + @opacity * red(@c2), (1 - @opacity) * green(@c1) + @opacity * green(@c2), (1 - @opacity) * blue(@c1) + @opacity * blue(@c2));
 }
+
+// @include calc-rem(14);
+.calc-rem(@target) {
+  font-size: (@target / @theme-font-size) * 1rem;
+}

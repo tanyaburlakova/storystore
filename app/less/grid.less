@@ -1,0 +1,26 @@
+@gutter: calc(5px/2);
+
+.grid {
+  margin: @gutter ~"-"(@gutter);
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    padding: @gutter;
+
+    &._33 {
+      flex: ~"calc(100%/3 - @{gutter})";
+    }
+
+    &._66 {
+      flex: ~"calc(100%/3 * 2 - @{gutter})";
+    }
+  }
+
+  &__snippet {
+    background: #F0EEED;
+    height: 200px;
+  }
+}

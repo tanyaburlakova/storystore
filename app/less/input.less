@@ -1,7 +1,7 @@
-@input-border-color: #d8d8d8;
+@input-border-color: rgba(255, 255, 255, 0.3);
 @placeholder-color: #99999b;
-@placeholder-size: 16px;
-@input-height: 50px;
+@placeholder-size: 14px;
+@input-height: 40px;
 @placeholder-height: 1;
 @placeholder-opacity: 1;
 @input-readonly-color: #fff;
@@ -20,6 +20,10 @@
 	letter-spacing: 0.04em;
 	transition: box-shadow .3s, border-color .3s;
 	-webkit-appearance: none;
+	background: none;
+	border-radius: 0;
+	.calc-rem(@placeholder-size);
+	color: rgba(255, 255, 255, 0.5);
 	&:focus,
 	&:active {
 		border-color: grey;
