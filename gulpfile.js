@@ -13,6 +13,7 @@ const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const templateData = require('./app/data/data.json');
 const mainBowerFiles = require('main-bower-files');
+const svgstore = require('gulp-svgstore');
 let bowerFiles = mainBowerFiles();
 
 console.info(`
@@ -206,4 +207,13 @@ Efficiency: ${efficiency}%
 			`);
 		}))
 		.pipe(gulp.dest('public/css'));
+});
+
+/******************************
+ * SVG stuff
+ ******************************/
+gulp.task('svgstore', function() {
+    return gulp.src('assets/img/ico/*.svg')
+        .pipe(svgstore())
+        .pipe(gulp.dest('public/icons'));
 });
