@@ -1,14 +1,29 @@
 @gutter: calc(5px/2);
 
+.tile {
+  align-items: stretch;
+  flex-basis: 0;
+  flex-grow: 1;
+  display: block;
+  flex-shrink: 1;
+  min-height: min-content;
+}
+
 .grid {
-  margin: @gutter -2.5px;
+  margin: 0 -2.5px;
+  display: flex;
 
   &__row {
     display: flex;
   }
 
   &__col {
-    padding: @gutter;
+    padding: 0 @gutter;
+    display: flex;
+
+    &.is-vertical {
+      flex-direction: column;
+    }
 
     &._33 {
       flex: ~"calc(100%/3 - @{gutter})";
@@ -21,6 +36,37 @@
 
   &__snippet {
     background: #F0EEED;
-    height: 200px;
+    margin: @gutter 0;
+  }
+}
+
+
+.cover-tile {
+  position: relative;
+  display: block;
+
+  &__contain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__elem {
+    width: 80%;
+    text-align: center;
+  }
+
+  &__text {
+    .calc-rem(20);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: .5px;
   }
 }
