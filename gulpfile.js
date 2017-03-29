@@ -213,7 +213,7 @@ Efficiency: ${efficiency}%
  * SVG stuff
  ******************************/
 gulp.task('svgstore', function() {
-    return gulp.src('assets/img/ico/*.svg')
+    return gulp.src('assets/img/svg/*.svg')
         .pipe(svgstore())
         .pipe(gulp.dest('public/icons'));
 });
