@@ -23,11 +23,22 @@
     },
     "slick-carousel": {
       "main": "slick/slick.js"
+    },
+    "font-awesome-less": {
+      "main": [
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.svg",
+        "less/font-awesome.less"
+      ]
     }
   },
   "dependencies": {
     "jquery": "~3.2.1",
     "normalize.less": "^1.0.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "components-font-awesome": "^4.7.0"
   }
 }
