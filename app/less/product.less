@@ -1,0 +1,169 @@
+.product-details {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 0 16px;
+  margin: 0 0 40px;
+
+  &__desc {
+    .calc-rem(18);
+    margin-bottom: 50px;
+  }
+
+  &__left {
+    padding-right: 40px;
+  }
+
+  &__right {
+    flex-basis: 380px;
+    flex-shrink: 0;
+  }
+
+  &__specs {
+    display: flex;
+    margin: 0 -20px;
+  }
+
+  &__specs-col {
+    padding: 0 20px;
+    width: 50%;
+    flex-grow: 1;
+  }
+}
+
+.product-media {
+  position: relative;
+}
+
+.product-card {
+  width: 300px;
+
+  &_float {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    z-index: 99;
+  }
+
+  &__avail {
+    border: 1px solid #82C341;
+    border-radius: 20px;
+    color: #82C341;
+    .calc-rem(10);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 3px 12px 0px;
+    margin: 0 0 24px;
+  }
+
+  &__options {
+    margin-bottom: 16px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__actions-item {
+    margin: 0 20px;
+  }
+
+  .btn {
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.price {
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+
+  &__current {
+    font-weight: 500;
+    .calc-rem(24);
+  }
+
+  &__old {
+    .calc-rem(16);
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 16px;
+  }
+
+  &_s {
+    .price__current {
+      .calc-rem(18);
+    }
+
+    .price__old {
+      .calc-rem(16);
+    }
+  }
+}
+
+.specs {
+  margin: 0 0 32px;
+
+  &__title {
+    .calc-rem(18);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 0 12px;
+  }
+  &__media {
+    display: flex;
+    border: 1px solid #ccc;
+  }
+  &__media-item {
+    display: flex;
+    width: 50%;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    &:nth-child(2) {
+      border-left: 1px solid #ccc;
+    }
+  }
+  &__media-img {
+    display: block;
+  }
+
+  &__media-text {
+    margin-left: 12px;
+    padding-top: 5px;
+  }
+}
+
+.purchase-details {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 24px 40px 32px;
+  margin: 0 0 16px;
+
+  &__title {
+    font-weight: 500;
+    color: #141414;
+    margin: 0 0 5px;
+  }
+}
+
+.recommendations {
+  margin: 0 0 80px;
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px;
+  }
+  &__title {
+    .calc-rem(24);
+    font-weight: 500;
+    color: #141414;
+    margin: 0;
+  }
+}

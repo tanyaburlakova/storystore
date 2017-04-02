@@ -14,6 +14,7 @@ const notify = require('gulp-notify');
 const templateData = require('./app/data/data.json');
 const mainBowerFiles = require('main-bower-files');
 const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
 let bowerFiles = mainBowerFiles();
 
 console.info(`
@@ -222,4 +223,10 @@ gulp.task('svgstore', () => {
 gulp.task('fonts', () => {
   return gulp.src('./bower_components/font-awesome-less/fonts/*.*')
     .pipe(gulp.dest('public/fonts'));
+});
+
+gulp.task('svgmin', () => {
+  return gulp.src('assets/img/svg/*.svg')
+    .pipe(svgmin())
+    .pipe(gulp.dest('assets/img/svg'));
 });

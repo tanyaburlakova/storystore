@@ -57,3 +57,58 @@
     }
   }
 }
+
+.gallery {
+  margin: 0 0 5px;
+}
+
+.gallery-nav {
+  margin: 0 -5px 50px 0;
+  position: relative;
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+
+    &.slick-current,
+    &:hover {
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 5px;
+        bottom: 0;
+        height: 5px;
+        background: #E7234F;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-right: 5px;
+    padding: 0;
+    width: ~"calc(100% - 5px)";
+  }
+
+  &__btn {
+    position: absolute;
+    font-size: 55px;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    height: 100%;
+    line-height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+
+    &_next {
+      right: 20px;
+    }
+
+    &_prev {
+      left: 15px;
+    }
+  }
+}

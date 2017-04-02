@@ -20,8 +20,9 @@
   <div class="container">
 
     <div class="container__head">
-      <ul class="bradcrumbs">
-        <li class="bradcrumbs__item">Каталог</li>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">Каталог</li>
+        <li class="breadcrumbs__item"><i class="fa fa fa-angle-right" aria-hidden="true"></i></li>
       </ul>
 
       <h1 class="headline">Дом</h1>
@@ -86,60 +87,8 @@
     {{>index/productGridTop}}
     {{>index/productGridTop}}
 
-    <a class="show-more btn btn_m btn_wide">
-      <span class="btn__text">Позакать еще</span>
-    </a>
-
-    <ul class="pagination">
-      <li class="pagination__item">
-        <a href="" class="pagination__link pagination__link_prev btn">
-          <span class="btn__text">Назад</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn is-active">
-          <span class="btn__text">1</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn">
-          <span class="btn__text">2</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn">
-          <span class="btn__text">3</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn">
-          <span class="btn__text">4</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn">
-          <span class="btn__text">5</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn">
-          <span class="btn__text">...</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link btn">
-          <span class="btn__text">14</span>
-        </a>
-      </li>
-      <li class="pagination__item">
-        <a href="" class="pagination__link pagination__link_next btn">
-          <span class="btn__text">Вперед</span>
-        </a>
-      </li>
-    </ul>
-
-    <i class="fa fa fa-angle-right" aria-hidden="true"></i>
-    <i class="fa fa fa-angle-left" aria-hidden="true"></i>
+    {{>showMore}}
+    {{>pagination}}
   </div>
 
   {{>footer}}

@@ -24,14 +24,18 @@
     "slick-carousel": {
       "main": "slick/slick.js"
     },
-    "font-awesome-less": {
+    "components-font-awesome": {
       "main": [
         "fonts/fontawesome-webfont.eot",
         "fonts/fontawesome-webfont.woff",
         "fonts/fontawesome-webfont.woff2",
         "fonts/fontawesome-webfont.ttf",
-        "fonts/fontawesome-webfont.svg",
-        "less/font-awesome.less"
+        "fonts/fontawesome-webfont.svg"
+      ],
+      "ignore": [
+        "less/*.*",
+        "css/*.*",
+        "scss/*.*"
       ]
     }
   },

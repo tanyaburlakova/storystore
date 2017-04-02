@@ -1,10 +1,13 @@
-@btn-bg: #E7234F;
-@btn-bg-default: #fff;
-@btn-border-default: #D0D0D0;
-@btn-text: #fff;
+@btn-bg-default: #ffffff;
+@btn-border-default: #d0d0d0;
 @btn-text-default: #141414;
 @btn-height: 40px;
 @btn-height-m: 48px;
+@btn-height-s: 32px;
+
+@btn-bg-primary: #e7234f;
+@btn-border-primary: #e7234f;
+@btn-text-primary: #ffffff;
 
 .btn {
   display: inline-block;
@@ -16,37 +19,53 @@
   color: @btn-text-default;
   border: 1px solid @btn-border-default;
   background: @btn-bg-default;
+  height: @btn-height;
+
   &__text {
-    .calc-rem(14);
-    text-transform: uppercase;
     line-height: @btn-height;
     display: inline-block;
-    height: @btn-height;
     vertical-align: middle;
     letter-spacing: 1px;
+    text-transform: uppercase;
+
+    .calc-rem(14);
   }
+
   &_m {
+    height: @btn-height-m;
     .btn__text {
       line-height: @btn-height-m;
-      height: @btn-height-m;
     }
   }
-  &:hover,
-  &.is-active {
-    background: #5A5A5A;
-    color: #fff;
+
+  &_s {
+    height: @btn-height-s;
+    padding: 0 25px;
+    .btn__text {
+      line-height: @btn-height-s;
+      .calc-rem(12);
+    }
   }
+
+  &:hover ,
+  &.is-active {
+    color: #ffffff;
+    background: #5a5a5a;
+  }
+
   &:active {
     transition: none;
-    background: @btn-bg;
   }
+
   &_wide {
     width: 100%;
     text-align: center;
   }
+
   &_upper {
     text-transform: uppercase;
   }
+
   &_big {
     text-transform: uppercase;
     .btn__text {
@@ -54,8 +73,21 @@
       height: 60px;
     }
   }
+
   &_transparent {
     border: none;
     background: none;
   }
+
+  &_primary {
+    color: @btn-text-primary;
+    border-color: @btn-border-primary;
+    background: @btn-bg-primary;
+  }
+}
+
+.btn-simple {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: .5px;
 }

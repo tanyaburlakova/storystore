@@ -40,6 +40,19 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  .calc-rem(15);
+  margin: 15px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, .5)
+}
+
+p {
+  margin: 16px 0;
+}
+
 ul,
 menu,
 nav {
@@ -68,20 +81,8 @@ strong {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
-  &_phone {
-    background-image: url('../img/ico/phone.svg');
-  }
-
-  &_wishlist {
-    background-image: url('../img/ico/wishlist.svg');
-  }
-
-  &_cart {
-    background-image: url('../img/ico/cart.svg');
-  }
-
-  &_search {
-    background-image: url('../img/ico/search.svg');
+  &_close {
+    background-image: url('../img/svg/close.svg');
   }
 }
 
@@ -116,7 +117,7 @@ strong {
   }
 }
 
-.bradcrumbs {
+.breadcrumbs {
   text-align: center;
 
   &__item {
@@ -189,4 +190,27 @@ strong {
     .calc-rem(12);
     color: rgba(0, 0, 0, 0.5);
   }
+}
+
+.dropdown {
+  border: 1px solid #D0D0D0;
+  background: #FAFAFA;
+  padding: 0 12px;
+
+  &__selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    .calc-rem(26);
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.counter {
+  display: flex;
 }

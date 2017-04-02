@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I love BEM</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.css?v={{timestamp}}">
+  {{>favicon siteUrl="http://localhost:3000"}}
+  <!--[if IE 9]>
+    <link rel="stylesheet" href="css/ie9.css">
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  {{>header}}
+
+  <div class="container">
+
+    <div class="container__head">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">Каталог</li>
+        <li class="breadcrumbs__item"><i class="fa fa fa-angle-right" aria-hidden="true"></i></li>
+
+        <li class="breadcrumbs__item">Дом</li>
+        <li class="breadcrumbs__item"><i class="fa fa fa-angle-right" aria-hidden="true"></i></li>
+
+        <li class="breadcrumbs__item">Светильники</li>
+        <li class="breadcrumbs__item"><i class="fa fa fa-angle-right" aria-hidden="true"></i></li>
+
+        <li class="breadcrumbs__item">Подвесные светильники</li>
+        <li class="breadcrumbs__item"><i class="fa fa fa-angle-right" aria-hidden="true"></i></li>
+      </ul>
+
+      <h1 class="headline">Подвесной светильник, LATITUDE Marmor Trom</h1>
+      <h2 class="sub-headline">Подвесной светильник из мрамора, арт. V2053</h2>
+    </div>
+
+    <div class="product-media">
+      <div class="product-card product-card_float popup">
+        <div class="product-card__avail">В наличии</div>
+        <div class="price">
+          <div class="price__current">19 900</div>
+          <div class="price__old">22 200</div>
+        </div>
+
+        <div class="dropdown product-card__options">
+          <div class="dropdown__selected">
+            <span class="dropdown__text">Выберите цвет</span>
+            <i class="dropdown__icon fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <a href="" class="btn btn_wide btn_primary btn_m">
+          <span class="btn__text">В корзину</span>
+        </a>
+        <a href="" class="btn btn_wide btn_s">
+          <span class="btn__text">Быстрый заказ</span>
+        </a>
+
+        <div class="product-card__actions">
+          <a href="" class="product-card__actions-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <use xlink:href="icons/svg.svg#wishlist-dark"></use>
+            </svg>
+          </a>
+
+          <a href="" class="product-card__actions-item">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <use xlink:href="icons/svg.svg#share"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <ul class="gallery js-slider-for">
+        <li class="gallery__item">
+          <img src="img/fish/product.png" alt="" class="gallery__img img">
+        </li>
+        <li class="gallery__item">
+          <img src="img/fish/product.png" alt="" class="gallery__img img">
+        </li>
+        <li class="gallery__item">
+          <img src="img/fish/product.png" alt="" class="gallery__img img">
+        </li>
+        <li class="gallery__item">
+          <img src="img/fish/product.png" alt="" class="gallery__img img">
+        </li>
+        <li class="gallery__item">
+          <img src="img/fish/product.png" alt="" class="gallery__img img">
+        </li>
+        <li class="gallery__item">
+          <img src="img/fish/product.png" alt="" class="gallery__img img">
+        </li>
+      </ul>
+
+      <div class="gallery-nav">
+        <div class="gallery-nav__inner js-slider-nav">
+          <div class="gallery-nav__item">
+            <img src="img/fish/product-mini.png" alt="" class="gallery-nav__img">
+          </div>
+          <div class="gallery-nav__item">
+            <img src="img/fish/product-mini.png" alt="" class="gallery-nav__img">
+          </div>
+          <div class="gallery-nav__item">
+            <img src="img/fish/product-mini.png" alt="" class="gallery-nav__img">
+          </div>
+          <div class="gallery-nav__item">
+            <img src="img/fish/product-mini.png" alt="" class="gallery-nav__img">
+          </div>
+          <div class="gallery-nav__item">
+            <img src="img/fish/product-mini.png" alt="" class="gallery-nav__img">
+          </div>
+          <div class="gallery-nav__item">
+            <img src="img/fish/product-mini.png" alt="" class="gallery-nav__img">
+          </div>
+        </div>
+
+        <div class="gallery-nav__btn gallery-nav__btn_prev js-slider-nav-prev"><i class="fa fa fa-angle-left" aria-hidden="true"></i></div>
+        <div class="gallery-nav__btn gallery-nav__btn_next js-slider-nav-next"><i class="fa fa fa-angle-right" aria-hidden="true"></i></div>
+      </div>
+    </div>
+
+    <div class="product-details">
+      <div class="product-details__left">
+        <p class="product-details__desc">Подвесной светильник Latitude Marmor Trom с минималистическим декором в современном стиле. Темно-вишневый цвет натурального мрамора с белыми прожилками гармонично вольется в самый притязательный интерьер. Отточенная геометрия благородных очертаний. *Trom - барабан (на датском).</p>
+        <div class="product-details__specs">
+          <div class="product-details__specs-col">
+            <div class="specs">
+              <div class="specs__title">Размеры</div>
+              <p class="specs__text">Корпус — D60 мм, h120 мм, потолочная чаша — D70 мм, h63 мм, цоколь Е27.</p>
+            </div>
+
+            <div class="specs">
+              <div class="specs__title">МАТЕРИАЛ</div>
+              <p class="specs__text">Корпус — мрамор Nero Marquinia; вся фурнитура — латунь, сталь; патрон — пластик; кабель в оплетке, длина 2,2 м.</p>
+            </div>
+          </div>
+          <div class="product-details__specs-col">
+            <div class="specs">
+              <div class="specs__title">Производитель</div>
+              <div class="specs__media">
+                <div class="specs__media-item">
+                  <img src="img/fish/brand.png" alt="" class="specs__media-img">
+                </div>
+                <div class="specs__media-item">
+                  <img src="img/fish/flag.png" alt="" class="specs__media-img">
+                  <span class="specs__media-text">Россия</span>
+                </div>
+              </div>
+              <p class="specs__text">LATITUDE — достаточно новый отечественный бренд, который разрабатывает и производит различные предметы домашнего интерьера, придерживаясь принципа совмещения качества, функциональности и традиций лаконичного скандинавского дизайна. Ведущий дизайнер — Николай Никитин. Придумано, разработано, произведено в России.</p>
+              <p><a href="" class="btn-simple">Все товары бренда <i class="fa fa fa-angle-right" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-details__right">
+        <div class="purchase-details">
+          <h2 class="purchase-details__title">ДОСТАВКА</h2>
+          <p class="purchase-details__text">Стоимость доставки в пределах МКАД 400–1500 руб. Условия доставки по области уточняйте по телефону +7 495 966-34-32.</p>
+          <a href="" class="btn btn_s">
+            <span class="btn__text">Подробнее о доставке</span>
+          </a>
+        </div>
+
+        <div class="purchase-details">
+          <h2 class="purchase-details__title">ОПЛАТА</h2>
+          <p class="purchase-details__text">Наличными или банковской картой при доставке (только по Москве и области). Банковской картой на сайте. Через банк, по выставленному счету.</p>
+          <a href="" class="btn btn_s">
+            <span class="btn__text">Подробнее об оплате</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="recommendations">
+      <div class="recommendations__head">
+        <h2 class="recommendations__title">Вам может понравиться</h2>
+      </div>
+
+      <div class="grid tile">
+        <div class="grid__row tile">
+          <div class="grid__col _66 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/big-product.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid__col _33 tile is-vertical">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product2.png" alt="">
+              </a>
+            </div>
+
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product2.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid tile">
+        <div class="grid__row tile">
+          <div class="grid__col _33 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product1.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid__col _33 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product1.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid__col _33 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product1.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendations">
+      <div class="recommendations__head">
+        <h2 class="recommendations__title">Вы смотрели</h2>
+        <a href="" class="btn-simple">Вся история просмотра <i class="fa fa fa-angle-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="grid tile">
+        <div class="grid__row tile">
+          <div class="grid__col _33 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product1.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid__col _33 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product1.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="grid__col _33 tile">
+            <div class="grid__snippet tile">
+              <a href=''>
+                <img class='img' src="img/fish/small-product1.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  {{>footer}}
+  <script src="js/plugins.min.js"></script>
+  <script src="js/app.js?v={{timestamp}}"></script>
+</body>
+</html>
