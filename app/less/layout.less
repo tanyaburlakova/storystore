@@ -19,6 +19,10 @@ body {
     text-align: center;
     margin: 35px 0 32px;
   }
+
+  &__footer {
+    padding: 35px 0 50px;
+  }
 }
 
 * {
@@ -81,8 +85,17 @@ strong {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
+  &_wishlist {
+    stroke: #8A8A8A;
+    stroke-width: 2px;
+  }
+
   &_close {
-    background-image: url('../img/svg/close.svg');
+    fill: #8A8A8A;
+  }
+
+  &_vk {
+    fill: #898989;
   }
 }
 
@@ -209,8 +222,4 @@ strong {
     .calc-rem(26);
     color: rgba(0, 0, 0, 0.5);
   }
-}
-
-.counter {
-  display: flex;
 }

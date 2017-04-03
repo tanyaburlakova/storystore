@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>I love BEM</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/app.css?v={{timestamp}}">
   {{>favicon siteUrl="http://localhost:3000"}}
   <!--[if IE 9]>
@@ -32,25 +31,31 @@
 
           <div class="cart__details">
             <h2 class="cart__product-name"><a href="">Подвесной светильник, LATITUDE Marmor Trom</a></h2>
+
             <div class="cart__price price price_s">
               <div class="price__current">19 900</div>
               <div class="price__old">22 200</div>
             </div>
+
             <div class="cart__actions">
               <div class="counter">
-                <a href="" class="counter__minus"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                <a href="" class="counter__btn counter__btn_minus btn btn_s">
+                  <span class="btn__text">-</span>
+                </a>
                 <span class="counter__text">1</span>
-                <a href="" class="counter__plus"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                <a href="" class="counter__btn counter__btn_plus btn btn_s">
+                  <span class="btn__text">+</span>
+                </a>
               </div>
 
-              <a href="" class="cart__action-item">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                  <use xlink:href="icons/svg.svg#wishlist-dark"></use>
+              <a href="" class="cart__actions-item">
+                <svg class="icon icon_wishlist" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <use xlink:href="icons/svg.svg#wishlist"></use>
                 </svg>
               </a>
 
-              <a href="" class="cart__action-item">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <a href="" class="cart__actions-item">
+                <svg class="icon icon_close" xmlns="http://www.w3.org/2000/svg" version="1.1">
                   <use xlink:href="icons/svg.svg#close"></use>
                 </svg>
               </a>
@@ -67,25 +72,31 @@
 
           <div class="cart__details">
             <h2 class="cart__product-name"><a href="">Подвесной светильник, LATITUDE Marmor Trom</a></h2>
-            <div class="cart__price">
-              <span class="cart__current-price">19 900</span>
-              <span class="cart__old-price">22 000</span>
+
+            <div class="cart__price price price_s">
+              <div class="price__current">19 900</div>
+              <div class="price__old">22 200</div>
             </div>
+
             <div class="cart__actions">
               <div class="counter">
-                <a href="" class="counter__minus"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                <a href="" class="counter__btn counter__btn_minus btn btn_s">
+                  <span class="btn__text">-</span>
+                </a>
                 <span class="counter__text">1</span>
-                <a href="" class="counter__plus"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                <a href="" class="counter__btn counter__btn_plus btn btn_s">
+                  <span class="btn__text">+</span>
+                </a>
               </div>
 
-              <a href="" class="cart__action-item">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                  <use xlink:href="icons/svg.svg#wishlist-dark"></use>
+              <a href="" class="cart__actions-item">
+                <svg class="icon icon_wishlist" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <use xlink:href="icons/svg.svg#wishlist"></use>
                 </svg>
               </a>
 
-              <a href="" class="cart__action-item">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <a href="" class="cart__actions-item">
+                <svg class="icon icon_close" xmlns="http://www.w3.org/2000/svg" version="1.1">
                   <use xlink:href="icons/svg.svg#close"></use>
                 </svg>
               </a>
@@ -98,10 +109,14 @@
 
       <div class="cart__right">
         <div class="product-card popup">
-          <div class="product-card__avail">В наличии</div>
-          <div class="product-card__price">
-            <div class="product-card__current-price">19 900</div>
-            <div class="product-card__old-price">22 200</div>
+          <div class="price price_vert">
+            <div class="price__title">Итого 12 товаров на сумму</div>
+            <div class="price__current">19 900</div>
+            <div class="price__old">22 200</div>
+          </div>
+
+          <div class="promo-code">
+            <a href="" class="btn-simple">Ввести промо-код</a>
           </div>
 
           <a href="" class="btn btn_wide btn_primary btn_m">
