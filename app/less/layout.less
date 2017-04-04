@@ -97,6 +97,15 @@ strong {
   &_vk {
     fill: #898989;
   }
+
+  &_s {
+    width: 12px;
+    height: 12px;
+  }
+
+  &_light {
+    fill: #fff;
+  }
 }
 
 .flex {
@@ -173,23 +182,40 @@ strong {
   &__controls-item {
     display: inline-block;
     vertical-align: middle;
-    margin: 5px 15px;
-    cursor: pointer;
-    padding: 5px 5px 3px 5px;
-    transition: all .3s ease-out;
+    margin: 5px 10px;
+    position: relative;
+  }
 
-    &:hover {
+  &__controls-link {
+    display: block;
+    cursor: pointer;
+    padding: 5px 8px 3px 8px;
+    transition: all .3s ease-out;
+    color: #5E5E5E;
+
+    &.is-selected {
       background: #E7234F;
 
       .filter__controls-elem {
         color: #fff;
       }
+
+      .filter__controls-clear {
+        display: inline-block;
+      }
     }
   }
 
   &__controls-elem {
-    color: #5E5E5E;
     transition: all .2s ease-out;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__controls-clear {
+    margin-left: 12px;
+    display: none;;
+    vertical-align: middle;
   }
 
   &__bottom {

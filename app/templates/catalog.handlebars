@@ -41,28 +41,100 @@
         <div class="filter__top">
           <ul class="filter__controls">
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Цена</span>
+              <a href="" class="filter__controls-link is-selected">
+                <span class="filter__controls-elem">
+                  Цена
+                </span>
+                <svg class="filter__controls-clear icon icon_light icon_s icon_close" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <use xlink:href="icons/svg.svg#close"></use>
+                </svg>
+              </a>
+
+              <div class="popup popup-filter">
+                <div class="popup-filter__inner">
+                  <div class="input-container">
+                    <input class="input-checkbox" type="checkbox" name="price_500" id="price_500">
+                    <label for="price_500" class="label-checkbox">До 5 000</label>
+                  </div>
+
+                  <div class="input-container">
+                    <input class="input-checkbox" type="checkbox" name="price_5000" id="price_5000">
+                    <label for="price_5000" class="label-checkbox">От 5 000 до 10 000</label>
+                  </div>
+
+                  <div class="input-container">
+                    <input class="input-checkbox" type="checkbox" name="price_600" id="price_600">
+                    <label for="price_600" class="label-checkbox">От 15 000 до 20 000</label>
+                  </div>
+
+                  <div class="input-container">
+                    <input class="input-checkbox" type="checkbox" name="price_700" id="price_700">
+                    <label for="price_700" class="label-checkbox">От 50 000 до 100 000</label>
+                  </div>
+                </div>
+
+                <a class="clear-btn">
+                  <svg class="clear-btn__item icon icon_s icon_close" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <use xlink:href="icons/svg.svg#close"></use>
+                  </svg>
+                  <span class="clear-btn__item clear-btn__text">сбросить фильтр</span>
+                </a>
+              </div>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Бренд</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Бренд</span>
+              </a>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Цвет</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Цвет</span>
+              </a>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Стиль</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Стиль</span>
+              </a>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Материал</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Материал</span>
+              </a>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Размер</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Размер</span>
+              </a>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Страна</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Страна</span>
+              </a>
             </li>
             <li class="filter__controls-item">
-              <span class="filter__controls-elem">Сортировать по цене</span>
+              <a href="" class="filter__controls-link">
+                <span class="filter__controls-elem">Сортировать <strong>по цене</strong></span>
+              </a>
+
+              <div class="popup popup-filter">
+                <div class="popup-filter__inner">
+                  <div class="input-container">
+                    <a href="">по умолчанию</a>
+                  </div>
+
+                  <div class="input-container">
+                    <a href="">по цене, сначала недорогие</a>
+                  </div>
+
+                  <div class="input-container">
+                    <a href="">по цене, сначала дорогие</a>
+                  </div>
+
+                  <div class="input-container">
+                    <a href="">по популярности</a>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

@@ -42,3 +42,28 @@
     background: @input-readonly-color;
   }
 }
+
+.input-container {
+  &:not(:last-child) {
+    margin: 0 0 14px;
+  }
+}
+
+.label-checkbox {
+  background: url('../img/svg/checkbox_def.svg') no-repeat 0 0;
+  padding-left: 28px;
+  padding: 0px 0 2px 28px;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.input-checkbox {
+  display: none;
+
+  &:checked {
+    + .label-checkbox {
+      background-image: url('../img/svg/checkbox.svg');
+    }
+  }
+}
