@@ -249,3 +249,21 @@ strong {
     color: rgba(0, 0, 0, 0.5);
   }
 }
+
+.sorting {
+  &__link {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
+    &.is-desc {
+      background-image: url('../img/svg/sort_desc.svg');
+      padding-right: 15px;
+    }
+
+    &.is-asc {
+      background-image: url('../img/svg/sort_asc.svg');
+      padding-right: 15px;
+    }
+  }
+}

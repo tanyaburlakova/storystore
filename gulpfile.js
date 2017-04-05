@@ -27,6 +27,9 @@ ${bowerFiles}
  ******************************/
 gulp.task('default', [
 	'copyAssets',
+	'svgmin',
+	'svgstore',
+	'fonts',
 	'browser-sync',
 	'handlebars',
 	'pluginsConcat',
@@ -40,6 +43,9 @@ gulp.task('default', [
  ******************************/
 gulp.task('build', [
 	'copyAssets',
+	'svgmin',
+	'svgstore',
+	'fonts',
 	'handlebars',
 	'pluginsConcatBuild',
 	'jsConcatBuild',
@@ -219,14 +225,13 @@ gulp.task('svgstore', () => {
     .pipe(gulp.dest('public/icons'));
 });
 
-
-gulp.task('fonts', () => {
-  return gulp.src('./bower_components/font-awesome-less/fonts/*.*')
-    .pipe(gulp.dest('public/fonts'));
-});
-
 gulp.task('svgmin', () => {
   return gulp.src('assets/img/svg/*.svg')
     .pipe(svgmin())
     .pipe(gulp.dest('assets/img/svg'));
+});
+
+gulp.task('fonts', () => {
+  return gulp.src('./bower_components/components-font-awesome/fonts/*.*')
+    .pipe(gulp.dest('public/fonts'));
 });
