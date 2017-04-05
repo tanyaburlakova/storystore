@@ -37,11 +37,18 @@ a {
   color: #141414;
 }
 
-h1 {
+h1,
+.headline {
   font-weight: 500;;
   .calc-rem(32);
   margin: 15px 0 20px;
   text-transform: uppercase;
+}
+
+.headline {
+  &_s {
+    .calc-rem(24);
+  }
 }
 
 h2 {
@@ -78,6 +85,7 @@ strong {
 
 .icon {
   display: inline-block;
+  vertical-align: middle;
 
   width: 24px;
   height: 24px;
@@ -98,6 +106,10 @@ strong {
     fill: #898989;
   }
 
+  &_share {
+    fill: #8A8A8A;
+  }
+
   &_s {
     width: 12px;
     height: 12px;
@@ -106,6 +118,16 @@ strong {
   &_light {
     fill: #fff;
   }
+}
+
+.icon-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 4px 0 0 8px;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: .5px;
+  .calc-rem(12);
+  text-transform: uppercase;
 }
 
 .flex {
@@ -210,6 +232,10 @@ strong {
     transition: all .2s ease-out;
     display: inline-block;
     vertical-align: middle;
+
+    strong {
+      color: #141414;
+    }
   }
 
   &__controls-clear {
@@ -253,17 +279,21 @@ strong {
 .sorting {
   &__link {
     display: inline-block;
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
+    letter-spacing: .5px;
+  }
+}
 
-    &.is-desc {
-      background-image: url('../img/svg/sort_desc.svg');
-      padding-right: 15px;
-    }
+.sort-state {
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
 
-    &.is-asc {
-      background-image: url('../img/svg/sort_asc.svg');
-      padding-right: 15px;
-    }
+  &.is-desc {
+    background-image: url('../img/svg/sort_desc.svg');
+    padding-right: 15px;
+  }
+
+  &.is-asc {
+    background-image: url('../img/svg/sort_asc.svg');
+    padding-right: 15px;
   }
 }

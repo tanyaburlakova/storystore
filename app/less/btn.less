@@ -9,6 +9,10 @@
 @btn-border-primary: #e7234f;
 @btn-text-primary: #ffffff;
 
+@btn-bg-raised: #fff;
+@btn-border-raised: #e7234f;
+@btn-text-raised: #e7234f;
+
 .btn {
   display: inline-block;
   padding: 0 35px;
@@ -83,6 +87,12 @@
     color: @btn-text-primary;
     border-color: @btn-border-primary;
     background: @btn-bg-primary;
+  }
+
+  &_raised {
+    color: @btn-text-raised;
+    border-color: @btn-border-raised;
+    background: @btn-bg-raised;
   }
 }
 
