@@ -5,11 +5,13 @@
 @placeholder-opacity: 1;
 @input-readonly-color: #ffffff;
 @input-background: #fafafa;
+@input-height: 40px;
 
 
 .input {
   font-weight: 300;
-  line-height: 1;
+  line-height: @input-height;
+  height: @input-height;
   width: 100%;
   padding: 0 10px;
   transition: box-shadow .3s, border-color .3s;
@@ -45,7 +47,7 @@
 
 .input-container {
   &:not(:last-child) {
-    margin: 0 0 8px;
+    margin: 0 0 16px;
   }
 }
 
@@ -66,4 +68,22 @@
       background-image: url('../img/svg/checkbox.svg');
     }
   }
+}
+
+.textarea {
+  font-weight: 300;
+  min-height: 120px;
+  resize: none;
+  width: 100%;
+  padding: 10px;
+  transition: box-shadow .3s, border-color .3s;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, .5);
+  border: solid 1px @input-border-color;
+  border-radius: 5px;
+  border-radius: 0;
+  background: @input-background;
+
+  -webkit-appearance: none;
+  .calc-rem(@placeholder-size);
 }

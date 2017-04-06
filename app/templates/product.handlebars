@@ -15,6 +15,8 @@
 </head>
 <body>
   {{>header}}
+  {{>addedToCart}}
+  {{>quickOrder}}
 
   <div class="container">
 
@@ -40,6 +42,9 @@
     <div class="product-media">
       <div class="product-card product-card_float popup">
         <div class="product-card__avail">В наличии</div>
+        <div class="product-card__avail is-order">Под заказ</div>
+        <div class="product-card__avail is-unavail">Нет в наличии</div>
+
         <div class="price">
           <div class="price__current">19 900</div>
           <div class="price__old">22 200</div>
@@ -55,6 +60,36 @@
         <a href="" class="btn btn_wide btn_primary btn_m">
           <span class="btn__text">В корзину</span>
         </a>
+
+        <div class="product-subscribe">
+          <a href="" class="btn btn_wide btn_raised btn_m">
+            <span class="btn__text">Оповестить</span>
+          </a>
+
+          <div class="product-subscribe__popup popup popup_float popup_corner" style="display: none;">
+            <div class="popup__inner">
+              <div class="product-subscribe__form">
+                <p>Оставьте ваш адрес и мы напишем когда товар станет доступен</p>
+
+                <div class="light-form">
+                  <input class="light-form__input input" type="text" placeholder="Электронная почта" />
+                  <button class="light-form__btn btn btn_s btn_primary">
+                    <span class="btn__text">Оповестить</span>
+                  </button>
+                </div>
+              </div>
+
+              <div style="display: none;" class="product-subscribe__success">
+                <p>Мы напишем когда товар станет доступен</p>
+
+                <a href="" class="btn btn_s">
+                  <span class="btn__text">Закрыть</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <a href="" class="btn btn_wide btn_s">
           <span class="btn__text">Быстрый заказ</span>
         </a>
@@ -66,11 +101,29 @@
             </svg>
           </a>
 
-          <a href="" class="product-card__actions-item">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <use xlink:href="icons/svg.svg#share"></use>
-            </svg>
-          </a>
+          <div class="product-share">
+            <a href="" class="product-card__actions-item">
+              <svg class="icon icon_share" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <use xlink:href="icons/svg.svg#share"></use>
+              </svg>
+            </a>
+
+            <div class="product-share__popup popup popup_float popup_corner">
+              <div class="popup__inner">
+                <a class="footer-social__item" href=''>
+                  <svg class="icon icon_facebook" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <use xlink:href="icons/svg.svg#facebook"></use>
+                  </svg>
+                </a>
+
+                <a class="footer-social__item" href=''>
+                  <svg class="icon icon_vk" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <use xlink:href="icons/svg.svg#vk"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
