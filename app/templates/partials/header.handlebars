@@ -1,44 +1,104 @@
 <header class="header">
   <div class="container">
+
     {{>toplinks}}
+
     <div class="header__content flex">
       <div class="top-contacts">
-        <svg class="top-contacts__icon icon icon_phone" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <svg class="top-contacts__item top-contacts__icon icon icon_phone" xmlns="http://www.w3.org/2000/svg" version="1.1">
           <use xlink:href="icons/svg.svg#phone"></use>
         </svg>
-        <span class="top-contacts__text">+7 495 966-34-32</span>
-        <a class="top-contacts__link" href="">Заказать звонок</a>
+        <span class="top-contacts__item top-contacts__text">+7 495 966-34-32</span>
+
+        <div class="top-contacts__item popup-wrapper">
+          <a class="top-contacts__link" href="">Заказать звонок</a>
+
+          <!--div class="popup-call popup popup_float popup_corner">
+            <div class="popup__inner">
+              <p>Мы перезвоним вам в течение двух часов.</p>
+
+              <form action="">
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Имя">
+                </div>
+
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Телефон в любом формате">
+                </div>
+
+                <button class="btn btn_wide btn_primary btn_m">
+                  <span class="btn__text">Заказать звонок</span>
+                </button>
+              </form>
+
+              <div class="centred">
+                <a href="" class="btn">
+                  <span class="btn__text">
+                    Закрыть окно
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div-->
+        </div>
       </div>
+
       <a href="" class="top-logo">
         <img src="img/logo.svg" class="top-logo__img">
       </a>
+
       <menu class="top-controls flex">
-        <li class="top-controls__item">
+        <li class="top-controls__item popup-wrapper">
           <a class="top-controls__link flex" href="">
             <span class="top-controls__text">Войти</span>
           </a>
+
+          <div class="popup popup_float popup_corner">
+            <div class="popup__inner">
+              <form action="">
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Электронная почта">
+                </div>
+
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Пароль">
+                </div>
+
+                <button class="btn btn_wide btn_primary btn_m">
+                  <span class="btn__text">Войти</span>
+                </button>
+
+                <div class="centred">
+                  <a href="" class="btn-simple">Забыли пароль?</a>
+                </div>
+              </form>
+
+
+            </div>
+          </div>
         </li>
 
         <li class="top-controls__item">
-          <a class="top-controls__link flex" href="">
+          <a class="top-controls__link top-controls__link_wishlist flex" href="">
             <svg class="top-controls__icon icon icon_wishlist" xmlns="http://www.w3.org/2000/svg" version="1.1">
               <use xlink:href="icons/svg.svg#wishlist"></use>
             </svg>
-            <span class="top-controls__count"></span>
+            <span class="top-controls__count">12</span>
           </a>
         </li>
 
         <li class="top-controls__item">
-          <a class="top-controls__link flex" href="">
-            <svg class="top-controls__icon icon" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <a class="top-controls__link top-controls__link_cart flex" href="">
+            <svg class="top-controls__icon icon icon_cart" xmlns="http://www.w3.org/2000/svg" version="1.1">
               <use xlink:href="icons/svg.svg#cart"></use>
             </svg>
-            <span class="top-controls__count"></span>
+            <span class="top-controls__count">5</span>
             <span class="top-controls__text">Корзина</span>
           </a>
         </li>
       </menu>
     </div>
+
     {{>nav}}
   </div>
 </header>

@@ -27,17 +27,15 @@
   &__link {
     color: rgba(255, 255, 255, 0.5);
     .calc-rem(11);
-    display: inline-block;
+    font-weight: 100;
   }
 
-  &__icon {
+  &__item {
     display: inline-block;
     vertical-align: middle;
   }
 
   &__text {
-    display: inline-block;
-    vertical-align: middle;
     margin: 0 5px;
   }
 }
@@ -62,6 +60,19 @@
     align-items: center;
     padding: 2px;
     font-weight: 500;
+    position: relative;
+
+    &_cart {
+      .top-controls__count {
+        left: 15px;
+      }
+    }
+
+    &_wishlist {
+      .top-controls__count {
+        left: 18px;
+      }
+    }
   }
 
   &__text {
@@ -73,5 +84,20 @@
     & ~ .top-controls__text {
       margin-left: 12px;
     }
+  }
+
+  &__count {
+    position: absolute;
+    color: #fff;
+    background: #E7234F;
+    .calc-rem(11);
+    height: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    top: 0;
+    padding: 1px 4px;
+    min-width: 16px;
+    text-align: center;
+    font-weight: 400;
   }
 }

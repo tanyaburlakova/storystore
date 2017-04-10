@@ -21,6 +21,46 @@
     justify-content: center;
     position: relative;
 
+    &:before {
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: all .25s ease-out;
+    }
+
+    &:not(:first-child) {
+      &:before {
+        transform: skewX(40deg);
+      }
+    }
+
+    &:hover {
+      &:not(:last-child) {
+        &:before {
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 12px solid #ffffff;
+          content: '';
+          bottom: -8px;
+          left: 50%;
+          content: '';
+          z-index: 99;
+          opacity: 1;
+          visibility: visible;
+          overflow: visible;
+        }
+      }
+
+      .nav-dropdown {
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+      }
+    }
+
     &:not(:first-child) {
       transform: skewX(-40deg);
 
@@ -32,7 +72,7 @@
     &:nth-child(1) {
       background-color: #efc519;
 
-      &:before {
+      &:after {
         position: absolute;
         content: '';
         top: 0;
@@ -89,6 +129,8 @@
     height: 100%;
     justify-content: center;
     padding: 9px 0 7px;
+    position: relative;
+    z-index: 2;
   }
 
   &__text,
@@ -105,29 +147,21 @@
 }
 
 .nav-dropdown {
-  position: absolute;
-  background: #fff;
-  box-shadow: 0 2px 20px 0 rgba(20, 20, 20, .25);
-  display: flex;
   text-align: left;
   z-index: 99;
-  padding: 22px 0 0;
-  top: 45px;
+  border-top: 8px solid transparent;
+  top: 40px;
   left: 0;
-  white-space: nowrap;
-  display: none;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all .25s ease-out;
 
-  &:before {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 12px solid #fff;
-    content: '';
-    top: -10px;
-    left: 46px;
-    content: '';
+  &__inner {
+    padding: 22px 0 0;
+    display: flex;
+    white-space: nowrap;
   }
 
   &__col {
@@ -167,6 +201,7 @@
 
     &:nth-child(1) {
       background-color: #efc519;
+
       &:before {
         position: absolute;
         content: '';

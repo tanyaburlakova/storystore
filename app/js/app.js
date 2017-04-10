@@ -4,7 +4,6 @@ $(() => {
     swipe: false,
     dots: true,
     infinite: true,
-    fade: true,
     autoplay: true,
     autoplaySpeed: 5000
   });
@@ -13,7 +12,6 @@ $(() => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    fade: true,
     asNavFor: '.js-slider-nav'
   });
 
@@ -32,7 +30,6 @@ $(() => {
   $('.js-product-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    fade: true,
     dots: false,
     focusOnSelect: true,
     prevArrow: $('.js-product-slider-prev'),
