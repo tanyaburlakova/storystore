@@ -34,30 +34,32 @@
       }
     }
 
-    &:hover {
-      &:not(:last-child) {
-        &:before {
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-bottom: 12px solid #ffffff;
-          content: '';
-          bottom: -8px;
-          left: 50%;
-          content: '';
-          z-index: 99;
+    &.has-children {
+      &:hover {
+        &:not(:last-child) {
+          &:before {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 12px solid #ffffff;
+            content: '';
+            bottom: -8px;
+            left: 50%;
+            content: '';
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            overflow: visible;
+          }
+        }
+
+        .nav-dropdown {
           opacity: 1;
           visibility: visible;
           overflow: visible;
         }
-      }
-
-      .nav-dropdown {
-        opacity: 1;
-        visibility: visible;
-        overflow: visible;
       }
     }
 
@@ -244,4 +246,69 @@
   }
 }
 
+.nav-wrapper {
+  position: relative;
+}
 
+.search-bar {
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5A5A5A;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .input {
+      background: none;
+      border: 0;
+      .calc-rem(18);
+      color: #fff;
+    }
+  }
+
+  &__icon {
+    width: 60px;
+    text-align: center;
+  }
+}
+
+.autocomplete {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 18px 12px 24px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 5px 12px;
+    margin: 4px -12px;
+
+    &:hover {
+      background: rgba(42, 162, 220, 0.15)
+    }
+  }
+
+  &__media {
+    width: 50px;
+    margin-right: 8px;
+  }
+
+  &__btn {
+    margin-top: 10px;
+  }
+}

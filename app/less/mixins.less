@@ -9,6 +9,18 @@
 		clear: both;
 	}
 }
+.is-hidden {
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .3s ease-out;
+}
+
+&.is-visible {
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+}
 // Body message
 .message (@msg) {
 	body {

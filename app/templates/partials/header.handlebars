@@ -53,9 +53,14 @@
             <span class="top-controls__text">Войти</span>
           </a>
 
-          <div class="popup popup_float popup_corner">
+          <!--div class="popup-login popup popup_float popup_corner">
+            <ul class="tabs">
+              <li class="tabs__item"><a href="" class="tabs__link is-active">Вход</a></li>
+              <li class="tabs__item"><a href="" class="tabs__link">Регистрация</a></li>
+            </ul>
+
             <div class="popup__inner">
-              <form action="">
+              <form class="form" action="">
                 <div class="input-container">
                   <input type="text" name="" id="" class="input" placeholder="Электронная почта">
                 </div>
@@ -73,9 +78,40 @@
                 </div>
               </form>
 
+              <form class="form" action="">
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Имя">
+                </div>
 
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Электронная почта">
+                </div>
+
+                <div class="input-container">
+                  <input type="text" name="" id="" class="input" placeholder="Пароль">
+                </div>
+
+                <button class="btn btn_wide btn_primary btn_m">
+                  <span class="btn__text">Зарегистрироваться  </span>
+                </button>
+              </form>
+
+              <div class="social-list centred">
+                <div class="social-list__title">Войти с помощью</div>
+
+                <a class="social-list__item" href=''>
+                  <svg class="icon icon_facebook" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <use xlink:href="icons/svg.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a class="social-list__item" href=''>
+                  <svg class="icon icon_vk" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <use xlink:href="icons/svg.svg#vk"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
+          </div-->
         </li>
 
         <li class="top-controls__item">
@@ -99,6 +135,9 @@
       </menu>
     </div>
 
-    {{>nav}}
+    <div class="nav-wrapper">
+      {{>nav}}
+      {{>searchbar}}
+    </div>
   </div>
 </header>

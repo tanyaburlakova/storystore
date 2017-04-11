@@ -27,7 +27,7 @@
 
   &:focus ,
   &:active {
-    border-color: grey;
+    border-color: rgba(255, 255, 255, 0.5);
     outline: none;
   }
 
@@ -42,6 +42,17 @@
     color: #36343a;
     border-color: @input-border-color;
     background: @input-readonly-color;
+  }
+
+  &_dark-theme {
+    border-right: 0;
+    background: none;
+    border-color: #5A5A5A;
+    color: #fff;
+  }
+
+  &.is-failed {
+    border-color: #E7234F;
   }
 }
 
