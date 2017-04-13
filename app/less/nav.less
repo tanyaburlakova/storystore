@@ -1,24 +1,21 @@
 .nav {
-  padding: 0;
+  padding: 0 28px;
 
-  background: #5a5a5a;
+  @media (min-width: (@tablet + @scrollbar)) {
+    display: flex;
+    padding: 0;
+    background: #5a5a5a;
+  }
 
   &__item {
-    display: flex;
-
     box-sizing: content-box;
-
     text-align: center;
     text-transform: uppercase;
     text-overflow: clip;
 
     color: #fff;
     border: none;
-
-    flex-grow: 1;
     .calc-rem(12);
-    align-items: center;
-    justify-content: center;
     position: relative;
 
     &:before {
@@ -30,28 +27,39 @@
 
     &:not(:first-child) {
       &:before {
-        transform: skewX(40deg);
+        @media (min-width: (@tablet + @scrollbar)) {
+          transform: skewX(40deg);
+        }
       }
+    }
+
+    @media (min-width: (@tablet + @scrollbar)) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
     }
 
     &.has-children {
       &:hover {
-        &:not(:last-child) {
-          &:before {
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 12px solid #ffffff;
-            content: '';
-            bottom: -8px;
-            left: 50%;
-            content: '';
-            z-index: 99;
-            opacity: 1;
-            visibility: visible;
-            overflow: visible;
+        @media (min-width: (@tablet + @scrollbar)) {
+          &:not(:last-child) {
+            &:before {
+              position: absolute;
+              width: 0;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 12px solid #ffffff;
+              content: '';
+              bottom: -8px;
+              left: 50%;
+              content: '';
+              z-index: 99;
+              opacity: 1;
+              visibility: visible;
+              overflow: visible;
+            }
           }
         }
 
@@ -64,10 +72,14 @@
     }
 
     &:not(:first-child) {
-      transform: skewX(-40deg);
+      @media (min-width: (@tablet + @scrollbar)) {
+        transform: skewX(-40deg);
+      }
 
       .nav__link {
-        transform: skewX(40deg);
+        @media (min-width: (@tablet + @scrollbar)) {
+          transform: skewX(40deg);
+        }
       }
     }
 
@@ -150,15 +162,18 @@
 
 .nav-dropdown {
   text-align: left;
-  z-index: 99;
-  border-top: 8px solid transparent;
-  top: 40px;
-  left: 0;
-  position: absolute;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
   transition: all .25s ease-out;
+
+  @media (min-width: (@tablet + @scrollbar)) {
+    position: absolute;
+    border-top: 8px solid transparent;
+    top: 40px;
+    left: 0;
+    z-index: 99;
+  }
 
   &__inner {
     padding: 22px 0 0;

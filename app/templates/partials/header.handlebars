@@ -4,7 +4,7 @@
     {{>toplinks}}
 
     <div class="header__content flex">
-      <div class="top-contacts">
+      <div class="top-contacts is-desktop">
         <svg class="top-contacts__item top-contacts__icon icon icon_phone" xmlns="http://www.w3.org/2000/svg" version="1.1">
           <use xlink:href="icons/svg.svg#phone"></use>
         </svg>
@@ -43,12 +43,18 @@
         </div>
       </div>
 
+      <div class="is-mobile">
+        <svg class="top-controls__icon icon icon_menu" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <use xlink:href="icons/svg.svg#menu"></use>
+        </svg>
+      </div>
+
       <a href="" class="top-logo">
         <img src="img/logo.svg" class="top-logo__img">
       </a>
 
       <menu class="top-controls flex">
-        <li class="top-controls__item popup-wrapper">
+        <li class="top-controls__item popup-wrapper is-desktop">
           <a class="top-controls__link flex" href="">
             <span class="top-controls__text">Войти</span>
           </a>
@@ -114,7 +120,7 @@
           </div-->
         </li>
 
-        <li class="top-controls__item">
+        <li class="top-controls__item is-desktop">
           <a class="top-controls__link top-controls__link_wishlist flex" href="">
             <svg class="top-controls__icon icon icon_wishlist" xmlns="http://www.w3.org/2000/svg" version="1.1">
               <use xlink:href="icons/svg.svg#wishlist"></use>
@@ -129,10 +135,26 @@
               <use xlink:href="icons/svg.svg#cart"></use>
             </svg>
             <span class="top-controls__count">5</span>
-            <span class="top-controls__text">Корзина</span>
+            <span class="top-controls__text is-desktop">Корзина</span>
           </a>
         </li>
       </menu>
+    </div>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__item">
+        <a class="mobile-menu__link">
+          Каталог
+        </a>
+      </div>
+      <div class="mobile-menu__item">
+        <a class="mobile-menu__link">
+          <svg class="mobile-menu__icon icon icon_light icon_search" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <use xlink:href="icons/svg.svg#search"></use>
+          </svg>
+          <span class="mobile-menu__text">Поиск</span>
+        </a>
+      </div>
     </div>
 
     <div class="nav-wrapper">

@@ -16,6 +16,11 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 
+  @media (max-width: (@tablet + @scrollbar)) {
+    min-width: 100%;
+    padding: 0 16px;
+  }
+
   &__head {
     text-align: center;
     margin: 35px 0 32px;
@@ -138,6 +143,10 @@ strong {
   letter-spacing: .5px;
   .calc-rem(12);
   text-transform: uppercase;
+}
+
+.is-mobile {
+  display: none;
 }
 
 .flex {
