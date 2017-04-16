@@ -1,0 +1,47 @@
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__inner {
+    width: 320px;
+    background: #141414;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    bottom: 0;
+    overflow: auto;
+  }
+
+  &__content {
+    padding-bottom: 70px;
+  }
+
+  &__list {
+    margin: 32px 0 40px 34px;
+  }
+
+  .nav {
+    padding: 0;
+    margin: 0 0 40px;
+  }
+
+  &__footer {
+    padding: 0 40px;
+  }
+
+  .social-list {
+    margin-left: 34px;
+  }
+
+  &__close {
+    position: fixed;
+    left: 328px;
+    top: 8px;
+    z-index: 101;
+  }
+}

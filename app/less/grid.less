@@ -16,25 +16,30 @@
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__col {
     padding: 0 @gutter;
     display: flex;
+    flex: ~"calc(100%/2 - @{gutter})";
+    flex-basis: ~"calc(100%/2 - @{gutter})";
 
     &.is-vertical {
       flex-direction: column;
     }
 
-    &._33 {
-      flex: ~"calc(100%/3 - @{gutter})";
-    }
+    @media (min-width: (@tablet + @scrollbar)) {
+      &._33 {
+        flex: ~"calc(100%/3 - @{gutter})";
+      }
 
-    &._66 {
-      flex: ~"calc(100%/3 * 2 - @{gutter})";
+      &._66 {
+        flex: ~"calc(100%/3 * 2 - @{gutter})";
 
-      .grid__media {
-        transform: scale(1.02);
+        .grid__media {
+          transform: scale(1.02);
+        }
       }
     }
   }

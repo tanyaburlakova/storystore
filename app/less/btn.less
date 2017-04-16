@@ -15,7 +15,7 @@
 
 .btn {
   display: inline-block;
-  padding: 0 35px;
+  padding: 0 16px;
   cursor: pointer;
   transition: background .3s;
   vertical-align: middle;
@@ -24,6 +24,10 @@
   border: 1px solid @btn-border-default;
   background: @btn-bg-default;
   height: @btn-height;
+
+  @media (min-width: (@tablet + @scrollbar)) {
+    padding: 0 35px;
+  }
 
   &__text {
     line-height: @btn-height;

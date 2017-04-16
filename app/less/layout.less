@@ -12,13 +12,14 @@ body {
 
 .container {
   max-width: 1180px;
-  min-width: 1024px;
+  min-width: 100%;
+  padding: 0 16px;
   margin: 0 auto;
-  padding: 0 20px;
 
-  @media (max-width: (@tablet + @scrollbar)) {
-    min-width: 100%;
-    padding: 0 16px;
+
+  @media (min-width: (@tablet + @scrollbar)) {
+    padding: 0 20px;
+    min-width: 1024px;
   }
 
   &__head {
@@ -113,8 +114,6 @@ strong {
 
   &_close {
     fill: #8A8A8A;
-    width: 18px;
-    height: 18px;
   }
 
   &_vk {
@@ -130,8 +129,21 @@ strong {
     height: 12px;
   }
 
+  &_m {
+    width: 18px;
+    height: 18px;
+  }
+
+  &_dark {
+    fill: #141414;
+  }
+
   &_light {
     fill: #fff;
+
+    &.icon_wishlist {
+      stroke: #fff;
+    }
   }
 }
 
@@ -303,6 +315,19 @@ strong {
   &__link {
     display: inline-block;
     letter-spacing: .5px;
+  }
+}
+
+.list {
+  &__item {
+    margin: 20px 0;
+    font-weight: 300;
+  }
+
+  &_light {
+    .list__link {
+      color: #fff;
+    }
   }
 }
 

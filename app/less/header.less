@@ -8,10 +8,10 @@
   &__content {
     justify-content: space-between;
     align-items: center;
-    padding: 22px 0;
+    padding: 12px 0;
 
-    @media (max-width: (@tablet + @scrollbar)) {
-      padding: 12px 0;
+    @media (min-width: (@tablet + @scrollbar)) {
+      padding: 22px 0;
     }
   }
 
@@ -23,10 +23,19 @@
       fill: #fff;
     }
   }
+
+  .nav {
+    display: none;
+
+    @media (min-width: (@tablet + @scrollbar)) {
+      display: flex;
+    }
+  }
 }
 
-.top-contacts {
+.shop-contacts {
   color: #fff;
+  display: flex;
 
   &__link {
     color: rgba(255, 255, 255, 0.5);
@@ -40,7 +49,11 @@
   }
 
   &__text {
-    margin: 0 5px;
+    margin: 0 10px;
+  }
+
+  &__tel {
+    margin-right: 5px;
   }
 }
 
@@ -56,10 +69,14 @@
   }
 }
 
-.top-controls {
-  align-items: center;
+.shop-controls {
   margin: 0;
   padding: 0;
+
+  @media (min-width: (@tablet + @scrollbar)) {
+    align-items: center;
+    display: flex;
+  }
 
   &__item {
     margin: 0 12px;
@@ -75,17 +92,18 @@
     text-transform: uppercase;
     align-items: center;
     padding: 2px;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
+    display: flex;
 
     &_cart {
-      .top-controls__count {
+      .shop-controls__count {
         left: 15px;
       }
     }
 
     &_wishlist {
-      .top-controls__count {
+      .shop-controls__count {
         left: 18px;
       }
     }
@@ -97,8 +115,8 @@
   }
 
   &__icon {
-    & ~ .top-controls__text {
-      margin-left: 12px;
+    & ~ .shop-controls__text {
+      margin-left: 16px;
     }
   }
 
@@ -116,16 +134,35 @@
     text-align: center;
     font-weight: 400;
   }
+
+  &_vertical {
+    background: #262626;
+    padding: 12px 0 12px 80px;
+    margin: 0 0 16px;
+
+    .shop-controls__item {
+      padding: 10px 0;
+    }
+
+    .shop-controls__text {
+      margin-left: 40px;
+    }
+
+    .shop-controls__icon {
+      & ~ .shop-controls__text {
+        margin-left: 16px;
+      }
+    }
+  }
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
+  justify-content: space-between;
   padding: 0 28px;
-  margin-bottom: 16px;
 
-  @media (max-width: (@tablet + @scrollbar)) {
-    display: flex;
-    justify-content: space-between;
+  @media (min-width: (@tablet + @scrollbar)) {
+    display: none;
   }
 
   &__item {
