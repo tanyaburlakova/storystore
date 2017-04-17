@@ -1,22 +1,35 @@
 .footer {
   background: #141414;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, .5);
   .calc-rem(12);
 
   a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, .5);
   }
 
   &__top {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
     padding: 24px 0;
+    flex-wrap: wrap;
+
+    @media (min-width: (@tablet + @scrollbar)) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__bottom {
-    padding: 24px 0;
+    padding: 24px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @media (min-width: (@tablet + @scrollbar)) {
+      flex-direction: row;
+      text-align: left;
+      padding: 24px 0;
+    }
   }
 
   &__copy-logo {
@@ -53,6 +66,11 @@
 
 .footer-nav {
   flex-grow: 1;
+  padding-left: 40px;
+
+  @media (min-width: (@tablet + @scrollbar)) {
+    padding: 0;
+  }
 
   &:last-child {
     flex-grow: 2;
@@ -66,6 +84,10 @@
 
 .footer-contacts {
   flex-grow: 1;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  padding: 24px 40px;
+  margin: 24px 0 0;
+  text-align: center;
 
   &__title {
     margin-bottom: 10px;

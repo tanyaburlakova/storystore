@@ -11,7 +11,7 @@
 }
 
 .grid {
-  margin: 5px -2.5px;
+  margin: 0 -2.5px;
   display: flex;
 
   &__row {
@@ -27,6 +27,14 @@
 
     &.is-vertical {
       flex-direction: column;
+    }
+
+    &._33 {
+      flex: 100%;
+    }
+
+    &._66 {
+      flex: 100%;
     }
 
     @media (min-width: (@tablet + @scrollbar)) {
@@ -53,14 +61,6 @@
   &__snippet {
     background: #F0EEED;
     margin: @gutter 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 

@@ -29,8 +29,19 @@
   padding-bottom: 25px;
 
   &__container {
-    display: flex;
-    align-items: stretch;
+    @media (min-width: (@tablet + @scrollbar)) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  .input {
+    margin-bottom: 16px;
+
+    @media (min-width: (@tablet + @scrollbar)) {
+      border-right: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -42,9 +53,13 @@
 .subscribe-snippet {
   margin: 0 0 5px;
   &__inner {
-    padding: 55px 0 15px;
+    padding: 45px 30px 15px;
     text-align: center;
     background: #141414;
+
+    @media (min-width: (@tablet + @scrollbar)) {
+      padding: 55px 0 15px;
+    }
   }
 
   &__title {
@@ -52,6 +67,7 @@
     letter-spacing: .5px;
     color: #ffffff;
     text-transform: uppercase;
+    padding: 0 10px;
 
     .calc-rem(14);
   }
