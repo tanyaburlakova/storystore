@@ -1,7 +1,7 @@
 .nav {
   padding: 0 28px;
 
-  @media (min-width: (@tablet + @scrollbar)) {
+  @media (min-width: (@portreit + @scrollbar)) {
     display: flex;
     padding: 0;
     background: #5a5a5a;
@@ -32,13 +32,13 @@
 
     &:not(:first-child) {
       &:before {
-        @media (min-width: (@tablet + @scrollbar)) {
+        @media (min-width: (@portreit + @scrollbar)) {
           transform: skewX(40deg);
         }
       }
     }
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -47,7 +47,7 @@
     }
 
     &.has-children {
-      @media (min-width: (@tablet + @scrollbar)) {
+      @media (min-width: (@portreit + @scrollbar)) {
         &:hover {
           &:not(:last-child) {
             &:before {
@@ -78,18 +78,18 @@
     }
 
     &:not(:first-child) {
-      @media (min-width: (@tablet + @scrollbar)) {
+      @media (min-width: (@portreit + @scrollbar)) {
         transform: skewX(-40deg);
       }
 
       .nav__link {
-        @media (min-width: (@tablet + @scrollbar)) {
+        @media (min-width: (@portreit + @scrollbar)) {
           transform: skewX(40deg);
         }
       }
     }
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
 
       &:nth-child(1) {
         background-color: #efc519;
@@ -214,7 +214,7 @@
     height: auto;
   }
 
-  @media (min-width: (@tablet + @scrollbar)) {
+  @media (min-width: (@portreit + @scrollbar)) {
     position: absolute;
     border-top: 8px solid transparent;
     top: 40px;
@@ -228,7 +228,7 @@
   &__inner {
     padding: 10px 0;
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       display: flex;
       white-space: nowrap;
       background: #fff;
@@ -239,7 +239,7 @@
   &__col {
     color: #fff;
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       color: #141414;
     }
   }
@@ -252,7 +252,7 @@
       margin-bottom: 0;
     }
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       margin: 0 24px 32px;
     }
   }
@@ -262,7 +262,7 @@
     display: none;
     letter-spacing: .5px;
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       padding: 5px 0;
       display: block;
     }
@@ -270,7 +270,7 @@
     &_title {
       font-weight: 400;
 
-      @media (min-width: (@tablet + @scrollbar)) {
+      @media (min-width: (@portreit + @scrollbar)) {
         font-weight: 600;
       }
     }
@@ -349,14 +349,8 @@
   height: 100%;
   background: #5A5A5A;
   left: -16px;
-  right: -16px;
-  width: auto;
-  top: 0;
-
-  @media (min-width: (@tablet + @scrollbar)) {
-    left: 0;
-    width: 100%;
-  }
+  left: 0;
+  width: 100%;
 
   &__container {
     display: flex;

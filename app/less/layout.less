@@ -15,11 +15,11 @@ body {
   min-width: 100%;
   padding: 0;
   margin: 0 auto;
+  box-sizing: content-box;
 
-
-  @media (min-width: (@tablet + @scrollbar)) {
+  @media (min-width: (@portreit + @scrollbar)) {
     padding: 0 20px;
-    min-width: 1024px;
+    min-width: 1180px;
   }
 
   &__head {
@@ -179,26 +179,30 @@ strong {
   background: #EBEBEB;
 
   &__inner {
-    padding: 0;
+    padding: 40px;
     margin: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    align-items: center;
+    padding: 0 24px 24px;
+    justify-content: space-between;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      flex-direction: row;
+      padding: 0;
+    }
   }
 
   &__caption {
     .calc-rem(20);
     letter-spacing: 2px;
-    display: flex;
-    align-items: center;
     font-weight: 100;
-    padding: 24px;
+    order: 1;
 
-    @media (min-width: (@tablet + @scrollbar)) {
-      position: absolute;
-      height: 100%;
-      padding: 0 35% 0 7%;
-      top: 0;
-      left: 0;
-      font-weight: 100;
+    @media (min-width: (@portreit + @scrollbar)) {
+      padding: 0 0 0 80px;
+      order: 0;
     }
   }
 }

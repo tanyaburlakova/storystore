@@ -2,16 +2,19 @@
 
 .tile {
   align-items: stretch;
-  flex-basis: 0;
-  flex-grow: 1;
   display: block;
-  flex-shrink: 1;
-  min-height: min-content;
   position: relative;
+
+  @media (min-width: (@portreit + @scrollbar)) {
+    min-height: min-content;
+    flex-shrink: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
 }
 
 .grid {
-  margin: 0 -2.5px;
+  margin: 2.5px -2.5px;
   display: flex;
 
   &__row {
@@ -29,20 +32,20 @@
       flex-direction: column;
     }
 
-    &._33 {
+    &_33 {
       flex: 100%;
     }
 
-    &._66 {
+    &_66 {
       flex: 100%;
     }
 
-    @media (min-width: (@tablet + @scrollbar)) {
-      &._33 {
+    @media (min-width: (@portreit + @scrollbar)) {
+      &_33 {
         flex: ~"calc(100%/3 - @{gutter})";
       }
 
-      &._66 {
+      &_66 {
         flex: ~"calc(100%/3 * 2 - @{gutter})";
 
         .grid__media {
@@ -104,5 +107,66 @@
       letter-spacing: 20px;
       font-weight: 100;
     }
+  }
+}
+
+.product-grid {
+  .clearfix;
+  margin: 2.5px -2.5px;
+
+  &__col {
+    width: ~"calc(100%/2 - @{gutter}*2)";
+    height: auto;
+    float: left;
+    margin: @gutter;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      float: left;
+      position: relative;
+      width: 390px;
+      height: 190px;
+    }
+
+    &_66 {
+      @media (min-width: (@portreit + @scrollbar)) {
+        width: 785px;
+        height: 385px;
+      }
+    }
+
+    &_right {
+
+      @media (min-width: (@portreit + @scrollbar)) {
+        float: right;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    background: #EBE9E8;
+  }
+
+  &__img {
+    opacity: .8;
+  }
+
+  &__details {
+    margin: 12px 10px 32px;
+    text-align: center;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      display: none;
+    }
+  }
+
+  &__title {
+    .calc-rem(12);
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    margin: 0 0 8px;
   }
 }

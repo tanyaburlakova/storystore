@@ -12,7 +12,7 @@
     padding: 24px 0;
     flex-wrap: wrap;
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       flex-wrap: nowrap;
     }
   }
@@ -25,7 +25,7 @@
     flex-direction: column;
     text-align: center;
 
-    @media (min-width: (@tablet + @scrollbar)) {
+    @media (min-width: (@portreit + @scrollbar)) {
       flex-direction: row;
       text-align: left;
       padding: 24px 0;
@@ -68,7 +68,7 @@
   flex-grow: 1;
   padding-left: 40px;
 
-  @media (min-width: (@tablet + @scrollbar)) {
+  @media (min-width: (@portreit + @scrollbar)) {
     padding: 0;
   }
 
@@ -83,11 +83,17 @@
 }
 
 .footer-contacts {
-  flex-grow: 1;
   border-top: 1px solid rgba(255, 255, 255, .1);
   padding: 24px 40px;
-  margin: 24px 0 0;
+  margin: 24px auto 0;
   text-align: center;
+
+  @media (min-width: (@portreit + @scrollbar)) {
+    text-align: left;
+    border-top: 0;
+    margin: 0;
+    padding: 0;
+  }
 
   &__title {
     margin-bottom: 10px;

@@ -1,45 +1,68 @@
 .main-gallery {
   position: relative;
   overflow: hidden;
+  background: #EBEBEB;
+
+  &__inner {
+    padding: 40px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    padding: 32px 0 0;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      flex-direction: row;
+      padding: 0;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
 
   &__caption {
     .calc-rem(20);
     letter-spacing: 2px;
-    position: absolute;
-    height: 100%;
-    padding: 0 50% 0 7%;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     font-weight: 100;
-  }
+    text-align: center;
+    padding: 0 24px;
+    position: absolute;
 
-  &__inner {
-    position: relative;
-    padding: 0;
-    margin: 0;
+    @media (min-width: (@portreit + @scrollbar)) {
+      padding: 80px 0 0 80px;
+      max-width: 530px;
+      text-align: left;
+      position: relative;
+    }
   }
 
   &__title {
-    .calc-rem(54);
+    .calc-rem(32);
     letter-spacing: 5px;
     text-transform: uppercase;
     line-height: 1.37;
     margin: 0;
-  }
+    color: #141414;
+    font-weight: 600;
 
-  &__caption {
-    .calc-rem(20);
-    letter-spacing: 5px;
+    @media (min-width: (@portreit + @scrollbar)) {
+      .calc-rem(54);
+    }
   }
 
   .slick-dots {
     position: absolute;
-    left: 7%;
-    bottom: 80px;
-    text-align: left;
+    left: 0;
+    bottom: 24px;
+    text-align: center;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      position: absolute;
+      left: 7%;
+      bottom: 80px;
+      text-align: left;
+    }
 
     li {
       margin: 0 16px 0 0;
