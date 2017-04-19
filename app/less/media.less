@@ -4,6 +4,15 @@
 @portreit: 640px;
 @mobile: 320px;
 @scrollbar: 30px;
+
+.is-mobile {
+  display: block;
+}
+
+.is-desktop {
+  display: none;
+}
+
 // Desktop
 @media (min-width: (@desktop + @scrollbar)) {
 	.message('Desktop');
@@ -15,14 +24,16 @@
 // Portreit
 @media (max-width: (@tablet + @scrollbar)) {
 	.message('Portreit');
-  .is-desktop {
-    display: none;
-  }
-  .is-mobile {
-    display: block;
-  }
 }
 // Mobile
-@media (max-width: (@portreit + @scrollbar)) {
+@media (min-width: (@portreit + @scrollbar)) {
 	.message('Mobile');
+
+  .is-desktop {
+    display: block;
+  }
+
+  .is-mobile {
+    display: none;
+  }
 }

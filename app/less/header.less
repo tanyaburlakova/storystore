@@ -35,7 +35,11 @@
 
 .shop-contacts {
   color: #fff;
-  display: flex;
+  display: none;
+
+  @media (min-width: (@portreit + @scrollbar)) {
+    display: flex;
+  }
 
   &__link {
     color: rgba(255, 255, 255, 0.5);
