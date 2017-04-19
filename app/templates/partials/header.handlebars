@@ -15,33 +15,7 @@
           <div class="shop-contacts__item popup-wrapper">
             <a class="shop-contacts__link" href="">Заказать звонок</a>
 
-            <!--div class="popup-call popup popup_float popup_corner">
-              <div class="popup__inner">
-                <p>Мы перезвоним вам в течение двух часов.</p>
-
-                <form action="">
-                  <div class="input-container">
-                    <input type="text" name="" id="" class="input" placeholder="Имя">
-                  </div>
-
-                  <div class="input-container">
-                    <input type="text" name="" id="" class="input" placeholder="Телефон в любом формате">
-                  </div>
-
-                  <button class="btn btn_wide btn_primary btn_m">
-                    <span class="btn__text">Заказать звонок</span>
-                  </button>
-                </form>
-
-                <div class="centred">
-                  <a href="" class="btn">
-                    <span class="btn__text">
-                      Закрыть окно
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div-->
+            {{>popup/callme}}
           </div>
         </div>
       </div>
@@ -64,70 +38,12 @@
             <span class="shop-controls__text">Войти</span>
           </a>
 
-          <!--div class="popup-login popup popup_float popup_corner">
-            <ul class="tabs">
-              <li class="tabs__item"><a href="" class="tabs__link is-active">Вход</a></li>
-              <li class="tabs__item"><a href="" class="tabs__link">Регистрация</a></li>
-            </ul>
-
-            <div class="popup__inner">
-              <form class="form" action="">
-                <div class="input-container">
-                  <input type="text" name="" id="" class="input" placeholder="Электронная почта">
-                </div>
-
-                <div class="input-container">
-                  <input type="text" name="" id="" class="input" placeholder="Пароль">
-                </div>
-
-                <button class="btn btn_wide btn_primary btn_m">
-                  <span class="btn__text">Войти</span>
-                </button>
-
-                <div class="centred">
-                  <a href="" class="btn-simple">Забыли пароль?</a>
-                </div>
-              </form>
-
-              <form class="form" action="">
-                <div class="input-container">
-                  <input type="text" name="" id="" class="input" placeholder="Имя">
-                </div>
-
-                <div class="input-container">
-                  <input type="text" name="" id="" class="input" placeholder="Электронная почта">
-                </div>
-
-                <div class="input-container">
-                  <input type="text" name="" id="" class="input" placeholder="Пароль">
-                </div>
-
-                <button class="btn btn_wide btn_primary btn_m">
-                  <span class="btn__text">Зарегистрироваться  </span>
-                </button>
-              </form>
-
-              <div class="social-list centred">
-                <div class="social-list__title">Войти с помощью</div>
-
-                <a class="social-list__item" href=''>
-                  <svg class="icon icon_facebook" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                    <use xlink:href="icons/svg.svg#facebook"></use>
-                  </svg>
-                </a>
-                <a class="social-list__item" href=''>
-                  <svg class="icon icon_vk" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                    <use xlink:href="icons/svg.svg#vk"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div-->
+          {{>popup/login}}
         </li>
 
         <li class="shop-controls__item is-desktop">
           <a class="shop-controls__link shop-controls__link_wishlist" href="">
-            <svg class="shop-controls__icon icon icon_wishlist" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <svg class="shop-controls__icon icon icon_white icon_wishlist" xmlns="http://www.w3.org/2000/svg" version="1.1">
               <use xlink:href="icons/svg.svg#wishlist"></use>
             </svg>
             <span class="shop-controls__count">12</span>

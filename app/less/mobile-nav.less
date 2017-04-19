@@ -2,19 +2,18 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: -100%;
   z-index: 100;
+  transition: all .5s ease;
 
   &__inner {
     width: 320px;
     background: #141414;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
     z-index: 101;
     bottom: 0;
     overflow: auto;
+    top: 0;
   }
 
   &__content {
@@ -34,8 +33,12 @@
     padding: 0 40px;
   }
 
+  .shop-contacts {
+    display: flex;
+  }
+
   .social-list {
-    margin-left: 34px;
+    margin-left: 25px;
   }
 
   &__close {

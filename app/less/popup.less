@@ -17,6 +17,13 @@
   &_float {
     position: absolute;
     padding: 0;
+    .is-hidden;
+
+    &.is-visible {
+      visibility: visible;
+      overflow: visible;
+      opacity: 1;
+    }
   }
 
   &_global {
@@ -89,12 +96,16 @@
 
 .overlay {
   position: fixed;
-  z-index: 98;
+  z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
   background: rgba(215, 215, 215, .9);
+  transition: all .5s ease-out;
 }
 
 .popup-filter {
@@ -128,7 +139,6 @@
 }
 
 .popup-tile {
-  position: absolute;
   top: 0;
   padding: 30px;
   left: -2%;

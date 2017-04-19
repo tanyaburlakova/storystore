@@ -4,10 +4,30 @@ body {
   line-height: 1.5714;
   padding: 0;
   margin: 0;
+  background: #fff;
 
   letter-spacing: 1px;
   color: #141414;
   .calc-rem(14);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  &.is-overlay {
+    .overlay {
+      z-index: 98;
+      opacity: 1;
+      overflow: visible;
+      visibility: visible;
+    }
+  }
+
+  &.is-mobile-menu {
+    .mobile-nav {
+      left: 0;
+    }
+  }
 }
 
 .container {
@@ -20,6 +40,7 @@ body {
   @media (min-width: (@portreit + @scrollbar)) {
     padding: 0 20px;
     min-width: 1180px;
+    overflow: visible;
   }
 
   &__head {
@@ -109,6 +130,10 @@ strong {
   &_wishlist {
     stroke: #8A8A8A;
     stroke-width: 2px;
+
+    &.icon_white {
+      stroke: #fff;
+    }
   }
 
   &_visa {
@@ -133,6 +158,10 @@ strong {
     fill: #8A8A8A;
   }
 
+  &_phone {
+    fill: #fff;
+  }
+
   &_s {
     width: 12px;
     height: 12px;
@@ -147,6 +176,10 @@ strong {
     fill: rgba(0, 0, 0, .5);
   }
 
+  &_white {
+    fill: #fff;
+  }
+
   &_light {
     fill: rgba(255, 255, 255, .5);
 
@@ -159,7 +192,7 @@ strong {
       stroke: rgba(255, 255, 255, .5);
 
       &:hover {
-        fill: rgba(255, 255, 255, 1);
+        stroke: rgba(255, 255, 255, 1);
       }
     }
   }

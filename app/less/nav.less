@@ -1,10 +1,23 @@
 .nav {
   padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+  .is-hidden;
+  height: 0;
+
+  &.is-opened {
+    .is-visible;
+    height: auto;
+    margin: 16px 0 8px;
+  }
 
   @media (min-width: (@portreit + @scrollbar)) {
-    display: flex;
+    flex-direction: row;
+    margin: 0;
     padding: 0;
     background: #5a5a5a;
+    .is-visible;
+    height: auto;
   }
 
   &__item {
@@ -60,6 +73,7 @@
               content: '';
               bottom: -8px;
               left: 50%;
+              transform: translate(-50%, 0);
               content: '';
               z-index: 100;
               opacity: 1;
@@ -199,18 +213,14 @@
 
 .nav-dropdown {
   text-align: left;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
+  .is-hidden;
   transition: all .25s ease-out;
   height: 0;
   background: #262626;
   text-align: center;
 
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-    overflow: visible;
+  &.is-opened {
+    .is-visible;
     height: auto;
   }
 
@@ -236,10 +246,13 @@
     }
   }
 
-  &__col {
+  &__link {
     color: #fff;
+    .calc-rem(12);
+    text-transform: none;
 
     @media (min-width: (@portreit + @scrollbar)) {
+      .calc-rem(14);
       color: #141414;
     }
   }
@@ -269,17 +282,12 @@
 
     &_title {
       font-weight: 400;
+      display: block;
 
       @media (min-width: (@portreit + @scrollbar)) {
         font-weight: 600;
       }
     }
-  }
-
-  &__link {
-    color: #141414;
-    .calc-rem(14);
-    text-transform: none;
   }
 }
 
@@ -348,9 +356,10 @@
   z-index: 15;
   height: 100%;
   background: #5A5A5A;
-  left: -16px;
+  top: 0;
   left: 0;
   width: 100%;
+  .is-hidden;
 
   &__container {
     display: flex;
@@ -361,13 +370,20 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
-    position: relative;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      position: relative;
+    }
 
     .input {
       background: none;
       border: 0;
       .calc-rem(18);
       color: #fff;
+    }
+
+    .autocomplete {
+
     }
   }
 
@@ -384,6 +400,7 @@
   width: 100%;
   background: #fff;
   padding: 18px 12px 24px;
+  .is-hidden;
 
   &__link {
     display: flex;
