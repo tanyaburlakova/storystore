@@ -79,11 +79,14 @@
 }
 
 .tabs {
-
   &__head {
     display: flex;
     border-bottom: 1px solid #E7E7E7;
-    padding: 0 35px;
+    padding: 0 60px;
+
+    @media (min-width: (@portreit + @scrollbar)) {
+      padding: 0 35px;
+    }
   }
 
   &__body {
@@ -93,6 +96,14 @@
   &__item {
     text-align: center;
     flex-grow: 1;
+  }
+
+  &__body-item {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
   }
 
   &__link {

@@ -2,8 +2,11 @@
 
 .header {
   background: @header-background-color;
-  padding: 0 0 16px;
-  margin: 0 0 5px;
+
+  @media (min-width: (@portreit + @scrollbar)) {
+    padding: 0 0 16px;
+    margin: 0 0 5px;
+  }
 
   &__content {
     justify-content: space-between;
@@ -147,6 +150,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 28px;
+  margin: 0 0 24px;
 
   @media (min-width: (@portreit + @scrollbar)) {
     display: none;
