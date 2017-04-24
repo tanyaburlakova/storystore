@@ -34,5 +34,7 @@ $(() => {
     focusOnSelect: true,
     prevArrow: $('.js-product-slider-prev'),
     nextArrow: $('.js-product-slider-next')
-  })
+  });
+
+  svg4everybody();
 });
