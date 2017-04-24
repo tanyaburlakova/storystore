@@ -64,13 +64,14 @@
   }
 
   &__title {
-    margin: 0 0 24px;
-    letter-spacing: .5px;
     color: #ffffff;
     text-transform: uppercase;
     padding: 0 10px;
+    margin: 0 auto 24px;
 
-    .calc-rem(14);
+    @media (min-width: (@portreit + @scrollbar)) {
+      max-width: 450px;
+    }
   }
 }
 

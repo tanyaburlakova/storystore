@@ -37,9 +37,7 @@
     }
 
     &:before {
-      opacity: 0;
-      visibility: hidden;
-      overflow: hidden;
+      .is-hidden;
       transition: all .25s ease-out;
     }
 
@@ -76,16 +74,12 @@
               transform: translate(-50%, 0);
               content: '';
               z-index: 100;
-              opacity: 1;
-              visibility: visible;
-              overflow: visible;
+              .is-visible;
             }
           }
 
           .nav-dropdown {
-            opacity: 1;
-            visibility: visible;
-            overflow: visible;
+            .is-visible;
           }
         }
       }
@@ -231,7 +225,6 @@
     left: 0;
     z-index: 99;
     height: auto;
-    z-index: 99;
     text-align: left;
   }
 
